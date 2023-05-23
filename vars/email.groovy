@@ -1,12 +1,10 @@
-package org.foo
-
 def sendEmail(String to, String subject, String body) {
     sh "to: ${config.to}"
     sh "subject: ${config.subject}"
     sh "body: ${config.body}"
 }
 
-def sendFailureEmail(stage) {
+def sendFailureEmail(String stage) {
     def message = "Build ${env.BUILD_NUMBER} status: FAILED. Failed Stage: ${stage}. Please go to ${env.BUILD_URL} for more information."
     def recipient = "Pull Request Owner"
     def subject = "Build ${env.BUILD_NUMBER} status: FAILED"
