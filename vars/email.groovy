@@ -1,7 +1,7 @@
 def sendEmail(String to, String subject, String body) {
-    sh "to: ${to}"
-    sh "subject: ${subject}"
-    sh "body: ${body}"
+    sh "echo to: ${to}"
+    sh "echo subject: ${subject}"
+    sh "echo body: ${body}"
 }
 
 def sendFailureEmail(String stage) {
