@@ -1,3 +1,5 @@
+package org.foo
+
 def sendEmail(String to, String subject, String body) {
     sh "to: ${config.to}"
     sh "subject: ${config.subject}"
